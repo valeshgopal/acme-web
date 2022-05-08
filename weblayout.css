@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth
+}
+body {
+    background-color: #333;
+    font-family:Arial, Helvetica, sans-serif;
+    color: white;
+    text-align: center;
+    width: 100vw;
+    overflow-x: hidden;
+}
+#showcase {
+    width: 100vw;
+    height: 50vh;
+    overflow: hidden;
+}
+#showcase .bg-img {
+    background: #333 url('https://images.pexels.com/photos/270348/pexels-photo-270348.jpeg?auto=compress&cs=tinysrgb&h=650&w=940');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 50vh;
+    position: absolute;
+    z-index: -1;
+    opacity: 0.4;
+}
+#showcase .content-wrap {
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 3em;
+}
+.content-wrap h1 {
+    padding: 0.5em 0;
+
+}
+.content-wrap .btn {
+    margin: 1em 0;
+    text-decoration: none;
+    color: white;
+    border: 0.025em solid white;
+    padding: 0.5em 1em;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: #fff;
+    color: #333;
+}
+#section-a {
+    background-color: #fff;
+    color: #333;
+    padding: 2em;
+}
+h2, h3 {
+    padding-bottom: 1em;
+}
+#section-b {
+    padding: 2em;
+}
+#section-b img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+#section-b ul {
+    list-style-type: none;
+}
+#section-b .content-wrap {
+    padding: 2em;
+}
+#section-b li {
+    background-color: #fff;
+    color: #333;
+    margin-bottom: 1em;
+}
+#section-b li:nth-child(3) {
+    margin-bottom: 0;
+}
+#section-c {
+    padding: 2em;
+    background: #fff;
+    color: #333;
+}
+#section-d .box {
+    padding: 2em;
+}
+#section-d .box:first-child {
+    background: #2690d4;
+}
+footer {
+    padding: 2em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+}
+footer a {
+    text-decoration: none;
+    color: #2690d4;
+}
+
+@media (min-width: 700px) {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+    }
+    #section-a .content-text {
+        columns: 2;
+    }
+    .content-wrap, #section-b ul {
+        grid-column: 2/4;
+    }
+    .box, #footer-section div {
+        grid-column: span 2;
+    }
+    #section-b ul {
+        display: flex;
+        gap: 1em;
+    }
+    #section-b li {
+        margin-bottom: 0;
+    }
+}
